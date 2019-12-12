@@ -2,9 +2,8 @@ package program
 
 import "sort"
 
+// TwoNumberSumBrute O(n^2) time | O(1) space
 func TwoNumberSumBrute(array []int, target int) []int {
-	// Write your code here.
-
 	for i := 0; i < len(array)-1; i++ {
 		for j := 1; j < len(array); j++ {
 			if array[i]+array[j] == target && i != j {
@@ -19,9 +18,8 @@ func TwoNumberSumBrute(array []int, target int) []int {
 	return []int{}
 }
 
+// TwoNumberSumHash O(n) time  | O(n) space
 func TwoNumberSumHash(array []int, target int) []int {
-	// Write your code here.
-
 	m := make(map[int]int)
 
 	for i := 0; i < len(array); i++ {
@@ -36,9 +34,8 @@ func TwoNumberSumHash(array []int, target int) []int {
 	return []int{}
 }
 
+// TwoNumberSum O(n log(n)) time | O(1) space
 func TwoNumberSum(array []int, target int) []int {
-	// Write your code here.
-
 	sort.Ints(array)
 
 	l := 0
