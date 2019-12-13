@@ -1,4 +1,4 @@
-package program
+package twonumbers
 
 import "sort"
 
@@ -18,7 +18,7 @@ func TwoNumberSumBrute(array []int, target int) []int {
 	return []int{}
 }
 
-// TwoNumberSumHash O(n) time  | O(n) space
+// TwoNumberSumHash  with hashing O(n) time  | O(n) space
 func TwoNumberSumHash(array []int, target int) []int {
 	m := make(map[int]int)
 
@@ -34,7 +34,7 @@ func TwoNumberSumHash(array []int, target int) []int {
 	return []int{}
 }
 
-// TwoNumberSum O(n log(n)) time | O(1) space
+// TwoNumberSum with presort O(n log(n)) time | O(1) space
 func TwoNumberSum(array []int, target int) []int {
 	sort.Ints(array)
 
